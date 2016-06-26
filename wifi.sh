@@ -2,6 +2,8 @@
 ##################################################################
 # Author:    Kevin Reed (Dweeber)
 #            dweeber.dweebs@gmail.com
+# Modified:  Paul Martin (Spazholio)
+#            github@lexal.net
 #
 # Copyright: Copyright (c) 2012 Kevin Reed <kreed@tnet.com>
 #            https://github.com/dweeber/WiFi_Check
