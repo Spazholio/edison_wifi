@@ -38,7 +38,7 @@
 # Settings
 # Where and what you want to call the Lockfile
 #lockfile=$(eval echo ~${SUDO_USER})'/src/edison_wifi/WiFi_Check.pid'
-lockfile=$'/home/edison/WiFi_Check.pid'
+lockfile='/home/edison/edison_wifi/WiFi_Check.pid'
 # Which Interface do you want to check/fix
 wlan='wlan0'
 pingip='8.8.8.8'
@@ -72,6 +72,7 @@ echo "Performing Network check for $wlan"
 if [ $? -ge 1 ] ; then
     echo "Network connection down! Attempting reconnection."
     sudo /sbin/ifdown --force wlan0
+    sudo rm -rf /var/lib/dhcp/*
     sleep 5
     sudo /sbin/ifup --force wlan0
     sudo /sbin/dhclient $wlan
